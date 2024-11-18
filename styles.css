@@ -1,0 +1,538 @@
+/* Global styles */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #2C2E33;
+    color: #FFFFFF;
+    padding-top: 80px; /* Ajustez en fonction de la hauteur du header */
+}
+
+header {
+    background-color: #2D2D2D;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed; /* Fixe le header en haut de la page */
+    top: 0; /* Positionne le header au sommet */
+    left: 0;
+    width: 100%; /* S'assure que le header occupe toute la largeur */
+    z-index: 10; /* Met le header au-dessus des autres éléments */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optionnel : ajoute une ombre */
+}
+
+header nav ul li a.active {
+    border-bottom: 3px solid #AC6CFF; /* Ajoute un trait sous le lien actif */
+    padding-bottom: 5px; /* Ajuste l'espace entre le texte et le trait */
+    color: #AC6CFF; /* Optionnel : Change la couleur du lien actif */
+}
+
+.header-container {
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 600px;
+}
+
+header h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FFFFFF;
+    padding-left: 30px; /* Padding ajouté */
+}
+
+header nav {
+    flex: 1;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    display: inline-flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Barre grise sous le header */
+header::after {
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: #808080;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+/* Moi Section */
+.moi-section {
+    background-color: #2C2E33;
+    padding: 60px 20px;
+    padding-bottom: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Nécessaire pour positionner les images */
+    overflow: hidden; /* Pour éviter que les images dépassent */
+    z-index: 1; /* Le contenu principal a un z-index plus élevé */
+}
+
+.moi-container {
+    position: relative; /* Pour que le contenu principal soit au-dessus */
+    z-index: 2; /* Le contenu principal est au-dessus des images d'arrière-plan */
+}
+
+.moi-section::before,
+.moi-section::after {
+    content: "";
+    position: absolute;
+    background-image: url('fond.png'); /* Remplacez par le chemin de votre image */
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: rotate(-39.28deg);
+    z-index: 0;
+}
+
+.moi-section::before {
+    width: 404px;
+    height: 528px;
+    top: -10.0px;
+    left: -150.0px;
+}
+
+.moi-section::after {
+    width: 404px;
+    height: 793.53px;
+    top: -150px;
+    left: 1400px;
+}
+
+.moi-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.moi-text h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.moi-text p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.moi-text .highlight {
+    color: #AC6CFF;
+    font-weight: bold;
+}
+
+.moi-image {
+    position: relative;
+}
+
+.profile-circle {
+    width: 150px;
+    height: 150px;
+    background-color: #AC6CFF;
+    border-radius: 50%;
+    position: relative; /* Permet de positionner l'image enfant */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-circle img {
+    width: 146px; /* Réduit la taille de l'image pour laisser 2px de violet */
+    height: 146px;
+    border-radius: 50%; /* Rend l'image ronde */
+    object-fit: cover; /* Assure que l'image s'adapte bien */
+    border: 2px solid #AC6CFF; /* Ajoute un bord de 2px violet */
+}
+
+
+/* Bouton Mon CV */
+.cv-button {
+    background-color: #AC6CFF;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px; /* Espace au-dessus du bouton */
+    margin-left: 200px; /* Positionne le bouton un peu à droite */
+}
+
+.cv-button:hover {
+    background-color: #9B5FEF;
+}
+
+.cv-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.cv-link {
+    text-decoration: none; /* Supprime le soulignement du lien */
+}
+
+
+
+/* Section Mes compétences */
+.competences-section {
+    background-color: #2F1C48;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.competences-section h2 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #FFFFFF;
+}
+
+.competences-container {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+}
+
+.competence-block {
+    background-color: #AC6CFF;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px; /* Taille uniforme des blocs */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Texte centré horizontalement */
+}
+
+.competence-block p {
+    font-size: 16px;
+    color: #FFFFFF;
+    margin: 5px 0;
+    text-align: center; /* Texte centré à l'intérieur des paragraphes */
+}
+
+.competence-block h3 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #FFFFFF;
+}
+
+
+/* Section Mes projets */
+.projets-section {
+    background-color: #2C2E33;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.projets-section h2 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #FFFFFF;
+}
+
+.project-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}
+
+.project-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 75px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-item.reverse {
+    flex-direction: row-reverse;
+}
+
+.project-image {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project-details {
+    text-align: left;
+    max-width: 600px;
+}
+
+.project-details h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #FFFFFF;
+}
+
+.project-details p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+.project-button {
+    background-color: #AC6CFF;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.project-button:hover {
+    background-color: #9B5FEF;
+}
+
+
+/* Section Parcours */
+.parcours-section {
+    background-color: #2F1C48;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.parcours-section h2 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #FFFFFF;
+}
+
+.parcours-section h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #FFFFFF;
+}
+
+.parcours-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centre l'ensemble horizontalement */
+    position: relative;
+    gap: 0%; /* Pas d'écart entre les blocs et le trait */
+}
+
+.parcours-connector {
+    width: 100px; /* Longueur du trait */
+    height: 5px; /* Épaisseur du trait */
+    background-color: #AC6CFF;
+}
+
+.parcours-block {
+    background-color: #AC6CFF;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    color: #FFFFFF;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.parcours-block h4 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.parcours-block p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+
+/* Section Contact */
+.contact-section {
+    background-color: #2C2E33;
+    padding: 60px 20px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.contact-section h2 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #FFFFFF;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: left;
+    padding-left: 200px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 18px;
+}
+
+.contact-icon {
+    width: 30px;
+    height: 30px;
+}
+
+footer::before {
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: #808080;
+    width: 100%;
+    position: relative;
+    margin-bottom: 20px; /* Espace entre la barre et le contenu du footer */
+}
+
+footer {
+    background-color: #2D2D2D;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+
+
+/* Responsive styles */
+
+/* Écrans inférieurs à 1024px */
+@media (max-width: 1024px) {
+    .header-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .header-container nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .moi-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .moi-text {
+        margin-bottom: 20px;
+    }
+
+    .cv-button {
+        margin-left: 0;
+    }
+
+    .competences-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .project-container {
+        gap: 20px;
+    }
+
+    .project-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .project-details {
+        max-width: none;
+    }
+
+    .parcours-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .parcours-connector {
+        display: none; /* Cache la ligne connectrice sur les petits écrans */
+    }
+
+    .contact-container {
+        padding-left: 0;
+        text-align: center;
+    }
+}
+
+/* Écrans inférieurs à 768px */
+@media (max-width: 768px) {
+    header {
+        padding: 10px 0;
+    }
+
+    header nav ul {
+        gap: 5px;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    .moi-text h1 {
+        font-size: 36px;
+    }
+
+    .competence-block {
+        width: 100%;
+    }
+
+    .project-image {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .parcours-block {
+        width: 100%;
+    }
+
+    .contact-item {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .contact-icon {
+        width: 20px;
+        height: 20px;
+    }
+}
