@@ -116,10 +116,10 @@ header::after {
 }
 
 .moi-section::after {
-    width: 404px;
-    height: 793.53px;
+    width: 500px;
+    height: 1000px;
     top: -150px;
-    left: 1400px;
+    left: 1600px;
 }
 
 .moi-container {
