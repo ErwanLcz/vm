@@ -1,0 +1,196 @@
+/* Global styles */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #2C2E33;
+    color: #FFFFFF;
+    padding-top: 80px; /* Ajustez en fonction de la hauteur du header */
+}
+
+header {
+    background-color: #2D2D2D;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed; /* Fixe le header en haut de la page */
+    top: 0; /* Positionne le header au sommet */
+    left: 0;
+    width: 100%; /* S'assure que le header occupe toute la largeur */
+    z-index: 10; /* Met le header au-dessus des autres éléments */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optionnel : ajoute une ombre */
+}
+
+header nav ul li a.active {
+    border-bottom: 3px solid #AC6CFF; /* Ajoute un trait sous le lien actif */
+    padding-bottom: 5px; /* Ajuste l'espace entre le texte et le trait */
+    color: #AC6CFF; /* Optionnel : Change la couleur du lien actif */
+}
+
+.header-container {
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 600px;
+}
+
+header h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FFFFFF;
+    padding-left: 30px; /* Padding ajouté */
+}
+
+header nav {
+    flex: 1;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    display: inline-flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Barre grise sous le header */
+header::after {
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: #808080;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 10; /* Garder le header sous les menus déroulants */
+}
+
+.titre{
+    font-size: 18px;
+    font-weight:300;
+    margin-bottom: 15px;
+    margin-left: 40px;
+}
+
+.entete{
+    font-size: 14px;
+    margin-left: 30px;
+
+}
+
+/* Styles pour le menu déroulant */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-link {
+    cursor: pointer;
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #2C2E33;
+    padding: 10px;
+    list-style: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 20; /* Assure que le menu passe au-dessus de la barre grise */
+}
+
+.dropdown-menu .dropdown-item {
+    position: relative;
+}
+
+.dropdown-menu a {
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 5px 10px;
+    display: block;
+}
+
+.dropdown-menu a:hover {
+    background-color: #AC6CFF;
+}
+
+.sub-dropdown {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: #2C2E33;
+    padding: 10px;
+    list-style: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 20; /* Assure que le menu passe au-dessus de la barre grise */
+}
+
+.dropdown-item:hover > .sub-dropdown {
+    display: block;
+}
+
+.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+
+.highlight {
+    color: #AC6CFF;
+    font-weight: bold;
+}
+
+table{
+    width: calc(100% - 40px); /* Ajuste la largeur pour laisser une marge */
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+td{
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 8px;
+    text-align: center;
+}
+
+.suite{
+    margin-left: 30px;
+    text-align: center;
+}
+.suite p{
+    font-size: 15px;
+    font-weight: 100;
+}
+.suite a{
+    text-decoration: none;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 40%;
+    background-color: #3E3B47;
+}
+
+.imageFull{
+    width: 100%;
+    height: 100%;
+}

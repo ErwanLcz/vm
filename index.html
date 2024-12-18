@@ -12,11 +12,49 @@
             <h1>ErwanLCZ</h1>
             <nav>
                 <ul>
-                    <li><a href="#moi">Moi</a></li>
-                    <li><a href="#competences">Compétences</a></li>
-                    <li><a href="#projets">Projets</a></li>
-                    <li><a href="#parcours">Parcours</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="../index.html#moi">Moi</a></li>
+                    <li><a href="../index.html#competences">Compétences</a></li>
+                    <li><a href="../index.html#projets">Projets</a></li>
+                    <li><a href="../index.html#parcours">Parcours</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-link">Portfolio</a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item">
+                                <a href="#">1ère année</a>
+                                <ul class="sub-dropdown">
+                                    <li><a href="1/comp1.html">1ère compétence</a></li>
+                                    <li><a href="1/comp2.html">2ème compétence</a></li>
+                                    <li><a href="1/comp3.html">3ème compétence</a></li>
+                                    <li><a href="1/comp4.html">4ème compétence</a></li>
+                                    <li><a href="1/comp5.html">5ème compétence</a></li>
+                                    <li><a href="1/comp6.html">6ème compétence</a></li>
+                                    <li><a href="1/comp7.html">7ème compétence</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="#">2ème année</a>
+                                <ul class="sub-dropdown">
+                                    <li><a href="2/comp1.html">1ère compétence</a></li>
+                                    <li><a href="2/comp2.html">2ème compétence</a></li>
+                                    <li><a href="2/comp3.html">3ème compétence</a></li>
+                                    <li><a href="2/comp4.html">4ème compétence</a></li>
+                                    <li><a href="2/comp5.html">5ème compétence</a></li>
+                                    <li><a href="2/comp6.html">6ème compétence</a></li>
+                                    <li><a href="2/comp7.html">7ème compétence</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="#">3ème année</a>
+                                <ul class="sub-dropdown">
+                                    <li><a href="3/comp1.html">1ère compétence</a></li>
+                                    <li><a href="3/comp2.html">2ème compétence</a></li>
+                                    <li><a href="3/comp6.html">6ème compétence</a></li>
+                                    <li><a href="3/comp7.html">7ème compétence</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -25,9 +63,9 @@
         <section id="moi" class="moi-section">
             <div class="moi-container">
                 <div class="moi-text">
-                    <h1>Erwan Le Coz</h1>
-                    <p>Je suis à la recherche d'un stage en <span class="highlight">développement informatique</span> 
-                    du <span class="highlight">7 avril au 27 juin</span>.</p>
+                    <h1>Recherche d'un stage en <span class="highlight">développement informatique</span> 
+                    du <span class="highlight">7 avril au 27 juin</span>.</h1>
+                    <p>Erwan Le Coz</p>
                     <br><br>
                     <a href="mon_cv.pdf" target="_blank" class="cv-link">
                         <button class="cv-button">
@@ -45,26 +83,57 @@
         </section>
         <section id="competences" class="competences-section">
             <h2>Mes compétences</h2>
-            <div class="competences-container">
-                <div class="competence-block">
-                    <h3>Langage</h3>
-                    <br>
-                    <p>HTML / CSS / PHP</p>
-                    <p>JAVA / JAVAFX / SCALA</p>
-                    <p>SQL</p>
-                    <p>PYTHON</p>
-                    <p>C</p>
+            
+            <!-- Langage Section -->
+            <h3>Langage</h3>
+            <div class="carousel" id="langage-carousel">
+                <div class="carousel-item">
+                    <img src="images/html.png" alt="HTML" class="carousel-image">
+                    <p>HTML</p>
                 </div>
-                <div class="competence-block">
-                    <h3>Logiciel</h3>
-                    <br>
-                    <p>ECLIPSE / INTELLIJ / VSCODE</p>
-                    <p>FIGMA</p>
-                    <p>SQL SERVER</p>
-                    <p>GIT / GITHUB</p>
+                <div class="carousel-item">
+                    <img src="images/css.png" alt="CSS" class="carousel-image">
+                    <p>CSS</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/php.png" alt="PHP" class="carousel-image">
+                    <p>PHP</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/java.png" alt="Java" class="carousel-image">
+                    <p>Java</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/python.png" alt="Python" class="carousel-image">
+                    <p>Python</p>
                 </div>
             </div>
-        </section>
+        
+            <!-- Logiciel Section -->
+            <h3>Logiciel</h3>
+            <div class="carousel" id="logiciel-carousel">
+                <div class="carousel-item">
+                    <img src="images/vscode.png" alt="VS Code" class="carousel-image">
+                    <p>VS Code</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/eclipse.png" alt="Eclipse" class="carousel-image">
+                    <p>Eclipse</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/figma.png" alt="Figma" class="carousel-image">
+                    <p>Figma</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/sqlserver.png" alt="SQL Server" class="carousel-image">
+                    <p>SQL Server</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/github.png" alt="GitHub" class="carousel-image">
+                    <p>GitHub</p>
+                </div>
+            </div>
+        </section>        
         <section id="projets" class="projets-section">
             <h2>Mes projets</h2>
             <div class="project-container">
@@ -98,8 +167,7 @@
             </div>
         </section>
         <section id="parcours" class="parcours-section">
-            <h2>Parcours</h2>
-            <h3>Parcours scolaire</h3>
+            <h2>Parcours scolaire</h2>
             <div class="parcours-container">
                 <div class="parcours-block">
                     <h4>Bac Général</h4>
@@ -107,7 +175,6 @@
                     <p>Option Math experte</p>
                     <p>Mention Bien</p>
                 </div>
-                <div class="parcours-connector"></div>
                 <div class="parcours-block">
                     <h4>But Informatique</h4>
                     <p>Laval</p>

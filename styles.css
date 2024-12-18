@@ -77,19 +77,19 @@ header::after {
     position: absolute;
     bottom: 0;
     left: 0;
+    z-index: 10; /* Garder le header sous les menus déroulants */
 }
 
 /* Moi Section */
 .moi-section {
+    height: 100vh; /* Prend toute la hauteur de la fenêtre */
     background-color: #2C2E33;
-    padding: 60px 20px;
-    padding-bottom: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative; /* Nécessaire pour positionner les images */
-    overflow: hidden; /* Pour éviter que les images dépassent */
-    z-index: 1; /* Le contenu principal a un z-index plus élevé */
+    position: relative;
+    overflow: hidden;
+    padding: 0; /* Supprime les paddings */
 }
 
 .moi-container {
@@ -109,17 +109,17 @@ header::after {
 }
 
 .moi-section::before {
-    width: 404px;
-    height: 528px;
-    top: -10.0px;
-    left: -150.0px;
+    width: 30vw; /* Largeur basée sur la largeur de la fenêtre */
+    height: 100vh; /* Hauteur basée sur la hauteur de la fenêtre */
+    top: 10vh; /* Position adaptée en fonction de la hauteur */
+    left: -15vw; /* Décalage horizontal */
 }
 
 .moi-section::after {
-    width: 500px;
-    height: 1000px;
-    top: -150px;
-    left: 1600px;
+    width: 40vw; /* Largeur basée sur la largeur de la fenêtre */
+    height: 100vh; /* Hauteur basée sur la hauteur de la fenêtre */
+    top: -20vh; /* Position adaptée */
+    left: 80vw; /* Position horizontale basée sur la largeur */
 }
 
 .moi-container {
@@ -127,7 +127,7 @@ header::after {
     justify-content: space-between;
     align-items: center;
     width: 90%;
-    max-width: 1200px;
+    max-width: 1100px;
 }
 
 .moi-text h1 {
@@ -137,7 +137,7 @@ header::after {
 }
 
 .moi-text p {
-    font-size: 18px;
+    font-size: 26px;
     line-height: 1.6;
 }
 
@@ -204,46 +204,55 @@ header::after {
 
 /* Section Mes compétences */
 .competences-section {
-    background-color: #2F1C48;
-    padding: 60px 20px;
     text-align: center;
+    padding: 60px 20px;
+    background-color: #2F1C48;
+    color: #FFFFFF;
 }
 
 .competences-section h2 {
     font-size: 48px;
     font-weight: bold;
-    margin-bottom: 40px;
-    color: #FFFFFF;
+    margin-bottom: 10vh;
+    text-align: left;
+    margin-left: 10vw;
 }
 
-.competences-container {
+.competences-section h3 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.carousel {
     display: flex;
+    gap: 20px;
+    padding: 10px;
     justify-content: center;
-    gap: 80px;
 }
 
-.competence-block {
-    background-color: #AC6CFF;
-    padding: 20px;
-    border-radius: 10px;
-    width: 300px; /* Taille uniforme des blocs */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center; /* Texte centré horizontalement */
+.carousel-item {
+    flex: 0 0 auto;
+    width: 150px; /* Taille des éléments */
+    text-align: center;
+    border: 2px solid #AC6CFF; /* Ajoute une bordure violette */
+    border-radius: 10px; /* Ajoute des coins arrondis */
+    padding: 10px; /* Ajoute un espace intérieur */
+    background-color: #2D2D2D; /* Ajoute un fond pour contraster */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ajoute une ombre pour un effet 3D */
 }
 
-.competence-block p {
+.carousel-image {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.carousel-item p {
     font-size: 16px;
-    color: #FFFFFF;
-    margin: 5px 0;
-    text-align: center; /* Texte centré à l'intérieur des paragraphes */
+    margin: 0;
 }
 
-.competence-block h3 {
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 15px;
-    color: #FFFFFF;
-}
 
 
 /* Section Mes projets */
@@ -256,8 +265,10 @@ header::after {
 .projets-section h2 {
     font-size: 48px;
     font-weight: bold;
-    margin-bottom: 40px;
+    margin-bottom: 10vh;
     color: #FFFFFF;
+    text-align: left;
+    margin-left: 10vw;
 }
 
 .project-container {
@@ -332,15 +343,10 @@ header::after {
 .parcours-section h2 {
     font-size: 48px;
     font-weight: bold;
-    margin-bottom: 40px;
+    margin-bottom: 10vh;
     color: #FFFFFF;
-}
-
-.parcours-section h3 {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #FFFFFF;
+    text-align: left;
+    margin-left: 10vw;
 }
 
 .parcours-container {
@@ -348,20 +354,15 @@ header::after {
     align-items: center;
     justify-content: center; /* Centre l'ensemble horizontalement */
     position: relative;
-    gap: 0%; /* Pas d'écart entre les blocs et le trait */
-}
-
-.parcours-connector {
-    width: 100px; /* Longueur du trait */
-    height: 5px; /* Épaisseur du trait */
-    background-color: #AC6CFF;
+    gap: 10vw; /* Pas d'écart entre les blocs et le trait */
 }
 
 .parcours-block {
-    background-color: #AC6CFF;
+    border: 2px solid #AC6CFF; /* Ajoute une bordure violette */
     padding: 20px;
     border-radius: 10px;
-    width: 300px;
+    width: 20vw;
+    height: 20vh;
     text-align: center;
     color: #FFFFFF;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -390,8 +391,10 @@ header::after {
 .contact-section h2 {
     font-size: 48px;
     font-weight: bold;
-    margin-bottom: 40px;
+    margin-bottom: 10vh;
     color: #FFFFFF;
+    text-align: left;
+    margin-left: 10vw;
 }
 
 .contact-container {
@@ -535,4 +538,64 @@ footer {
         width: 20px;
         height: 20px;
     }
+}
+
+
+/* Styles pour le menu déroulant */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-link {
+    cursor: pointer;
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #2C2E33;
+    padding: 10px;
+    list-style: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 20; /* Assure que le menu passe au-dessus de la barre grise */
+}
+
+.dropdown-menu .dropdown-item {
+    position: relative;
+}
+
+.dropdown-menu a {
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 5px 10px;
+    display: block;
+}
+
+.dropdown-menu a:hover {
+    background-color: #AC6CFF;
+}
+
+.sub-dropdown {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: #2C2E33;
+    padding: 10px;
+    list-style: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 20; /* Assure que le menu passe au-dessus de la barre grise */
+}
+
+.dropdown-item:hover > .sub-dropdown {
+    display: block;
+}
+
+.dropdown:hover > .dropdown-menu {
+    display: block;
 }
