@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Erwan Le Coz - Portfolio</title>
+    <title>Portfolio - Livre Interactif</title>
     <link rel="stylesheet" href="../styleComp.css">
 </head>
 <body>
@@ -21,28 +21,10 @@
                         <a href="#" class="dropdown-link">Portfolio</a>
                         <ul class="dropdown-menu">
                             <li class="dropdown-item">
-                                <a href="#">1ère année</a>
-                                <ul class="sub-dropdown">
-                                    <li><a href="../1/comp1.html">1ère compétence</a></li>
-                                    <li><a href="../1/comp2.html">2ème compétence</a></li>
-                                    <li><a href="../1/comp3.html">3ème compétence</a></li>
-                                    <li><a href="../1/comp4.html">4ème compétence</a></li>
-                                    <li><a href="../1/comp5.html">5ème compétence</a></li>
-                                    <li><a href="../1/comp6.html">6ème compétence</a></li>
-                                    <li><a href="../1/comp7.html">7ème compétence</a></li>
-                                </ul>
+                                <a href="../1/livre.html">1ème année</a>
                             </li>
                             <li class="dropdown-item">
-                                <a href="#">2ème année</a>
-                                <ul class="sub-dropdown">
-                                    <li><a href="../2/comp1.html">1ère compétence</a></li>
-                                    <li><a href="../2/comp2.html">2ème compétence</a></li>
-                                    <li><a href="../2/comp3.html">3ème compétence</a></li>
-                                    <li><a href="../2/comp4.html">4ème compétence</a></li>
-                                    <li><a href="../2/comp5.html">5ème compétence</a></li>
-                                    <li><a href="../2/comp6.html">6ème compétence</a></li>
-                                    <li><a href="../2/comp7.html">7ème compétence</a></li>
-                                </ul>
+                                <a href="../2/livre.html">2ème année</a>
                             </li>
                             <li class="dropdown-item">
                                 <a href="#">3ème année</a>
@@ -59,7 +41,39 @@
             </nav>
         </div>
     </header>
-    <br>
-    <img class="imageFull" src="../images/comp7.png" alt="Images sur mes objectifs de l'année">
-</body>
+    <br><br>
+    <div class="flipbook">
+        <div class="page">
+            <img src="couverture.png" alt="Couverture" class="book-image">
+        </div>
+        <div class="page">
+            <img src="sommaire.png" alt="Sommaire" class="book-image">
+        </div>
+        <div class="page">
+            <img src="comp1.png" alt="Compétence 1" class="book-image">
+        </div>
+        <div class="page">
+            <img src="comp2.png" alt="Compétence 2" class="book-image">
+        </div>
+        <div class="page">
+            <img src="comp3.png" alt="Compétence 3" class="book-image">
+        </div>
+        <div class="page">
+            <img src="comp4.png" alt="Compétence 4" class="book-image">
+        </div>
+        <div class="page">
+            <img src="comp5.png" alt="Compétence 5" class="book-image">
+        </div>
+        <div class="page">
+            <img src="comp6.png" alt="Compétence 6" class="book-image">
+        </div>
+        <div class="page">
+            <img src="comp7.png" alt="Compétence 7" class="book-image">
+        </div>
+    <script src="../jquery.js"></script>
+    <script src="../turn.js"></script>
+    <script>
+        $(".flipbook").turn();
+    </script>
+    </body>
 </html>

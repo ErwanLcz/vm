@@ -21,12 +21,6 @@ header {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optionnel : ajoute une ombre */
 }
 
-header nav ul li a.active {
-    border-bottom: 3px solid #AC6CFF; /* Ajoute un trait sous le lien actif */
-    padding-bottom: 5px; /* Ajuste l'espace entre le texte et le trait */
-    color: #AC6CFF; /* Optionnel : Change la couleur du lien actif */
-}
-
 .header-container {
     width: 90%;
     max-width: 1200px;
@@ -194,3 +188,47 @@ td{
     width: 100%;
     height: 100%;
 }
+
+.flipbook {
+    margin-left: 15%;
+    width: 1200px;
+    height: 1100px;
+}
+
+.flipbook .hard {
+    background: #FFFFFF !important;
+    color: #000;
+    font-weight: bold;
+    border: none; 
+}
+
+.flipbook .hard small{
+	font-style: italic;
+	font-weight: lighter;
+	opacity: 0.7;
+	font-size: 14px;
+}
+
+.flipbook .page {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Ajout ou vérification */
+    height: 100%; /* Ajout ou vérification */
+    border: none; /* Enlevez les bordures pour maximiser l'espace */
+}
+
+.page img {
+    width: 100%; /* Remplacez 70% par 100% */
+    height: 100%; /* Ajoutez cette ligne pour que les images remplissent la hauteur */
+    object-fit: cover; /* Assurez-vous que l'image reste proportionnelle */
+    margin: 0; /* Enlevez toute marge pour maximiser l'espace utilisé */
+}
+
+.flipbook .page small{
+	font-size: 14px;
+    margin-bottom: 10px;
+}
+

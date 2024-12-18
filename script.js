@@ -32,3 +32,34 @@ document.querySelectorAll('.dropdown').forEach(dropdown => {
         dropdown.querySelector('.dropdown-menu').style.display = 'none';
     });
 });
+
+
+$(document).ready(function () {
+    // Initialisation de Turn.js après le chargement des images
+    $(window).on("load", function () {
+        $("#book").turn({
+            width: 1200,          // Largeur totale (double page)
+            height: 600,          // Hauteur du livre
+            display: 'double',    // Mode "livre ouvert"
+            autoCenter: true,     // Centre automatiquement
+            duration: 1000,       // Animation fluide
+            gradients: true,
+            elevation: 50,
+            when: {
+                start: function (event, pageObject) {
+                    console.log("Page tournée :", pageObject.page);
+                },
+                turned: function (event, pageObject) {
+                    console.log("Page actuelle :", pageObject);
+                }
+            }
+        });
+
+        // Réinitialiser l'affichage pour corriger les bugs
+        $("#book").turn("resize");
+        $("#book").turn("display", "double");
+    });
+
+    // Ajout d'une page blanche uniquement si nécessaire
+    $("#book").turn("addPage", $("<div class='page turn-page'></div>"), 1);
+});
